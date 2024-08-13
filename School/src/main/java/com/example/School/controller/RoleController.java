@@ -26,15 +26,13 @@ public class RoleController {
         roleService.addRole2(roleDTOList);
     }
 
-    @RequestMapping(method = RequestMethod.GET, value = "/getAllRole")
+    @GetMapping(value = "/getAllRole")
     public List<RoleDTO> getAllRole() {
-        //System.out.println("reached controller 1");
-        return roleService.getAllUsers();
+               return roleService.getAllUsers();
     }
 
-    @RequestMapping(method = RequestMethod.GET, value = "/getRoleById")
+    @GetMapping( value = "/getRoleById")
     public RoleDTO getRoleById(@RequestParam String id) {
-        //System.out.println("reached controller 1");
         return roleService.getRoleById(id);
     }
 
